@@ -1,7 +1,7 @@
 import BaiDuAnalytics from "@/app/BaiDuAnalytics";
 import GoogleAnalytics from "@/app/GoogleAnalytics";
 import { TailwindIndicator } from "@/components/TailwindIndicator";
-import { ThemeProvider } from "@/components/ThemeProvider";
+import { ThemeProvider } from "@/components/ThemeProvider"; // 非默认导出都要加{},这个组件以后可能还有别的导出，因此不加 default
 import Footer from "@/components/footer/Footer";
 import Header from "@/components/header/Header";
 import { siteConfig } from "@/config/site";
@@ -13,10 +13,14 @@ import { Analytics } from "@vercel/analytics/react";
 import { Viewport } from "next";
 import { Inter as FontSans } from "next/font/google";
 
-export const fontSans = FontSans({
+const fontSans = FontSans({
   subsets: ["latin"],
   variable: "--font-sans",
 });
+
+const metadataBase = siteConfig.metadataBase instanceof URL
+  ? siteConfig.metadataBase
+  : new URL(siteConfig.metadataBase);
 
 export const metadata = {
   title: siteConfig.name,
@@ -25,7 +29,7 @@ export const metadata = {
   authors: siteConfig.authors,
   creator: siteConfig.creator,
   icons: siteConfig.icons,
-  metadataBase: siteConfig.metadataBase,
+  metadataBase: metadataBase,
   openGraph: siteConfig.openGraph,
   twitter: siteConfig.twitter,
 };
@@ -35,7 +39,7 @@ export const viewport: Viewport = {
 
 export default async function RootLayout({
   children,
-  params: { lang },
+  params: { lang }, // 确保 params 参数有一个 lang 属性
 }: {
   children: React.ReactNode;
   params: { lang: string[] | undefined };

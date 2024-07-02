@@ -1,8 +1,9 @@
 "use client";
 import { LineText } from "@/components/LineText";
 import CTAButton from "@/components/home/CTAButton";
-import { motion } from "framer-motion";
+import { motion } from "framer-motion"; // 动画库
 
+// 也可以分别用 any 指定类型，这里用了{}做了分组支持
 const Hero = ({ locale, CTALocale }: { locale: any; CTALocale: any }) => {
   return (
     <>

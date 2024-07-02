@@ -14,6 +14,7 @@ export default async function LangHome({
   params: { lang: string };
 }) {
   // const langName = (lang && lang[0]) || defaultLocale;
+  // 通过 url 路径传递的 lang，为数组类型
   let langName =
     lang && lang[0] && lang[0] !== "index" ? lang[0] : defaultLocale;
 

@@ -15,18 +15,18 @@ const baseSiteConfig = {
   keywords: ["landing page boilerplate", "landing page template", "awesome landing page", "next.js landing page"],
   authors: [
     {
-      name: "weijunext",
-      url: "https://weijunext.com",
+      name: "kelvin",
+      url: "https://kelvinLiu.com",
       twitter: 'https://twitter.com/weijunext',
     }
   ],
-  creator: '@weijunext',
+  creator: '@kelvin.liu',
   openSourceURL: 'https://github.com/weijunext/landing-page-boilerplate',
   themeColors: [
     { media: '(prefers-color-scheme: light)', color: 'white' },
     { media: '(prefers-color-scheme: dark)', color: 'black' },
   ],
-  nextThemeColor: 'dark', // next-theme option: system | dark | light
+  nextThemeColor: 'system', // next-theme option: system | dark | light
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon-16x16.png",
@@ -38,7 +38,7 @@ const baseSiteConfig = {
     { name: 'buyMeCoffee', href: "https://www.buymeacoffee.com/weijunext", icon: SiBuymeacoffee }
   ],
   footerLinks: [
-    { name: 'email', href: "mailto:weijunext@gmail.com", icon: MdEmail },
+    { name: 'email', href: "mailto:sulphur163@gmail.com", icon: MdEmail },
     { name: 'twitter', href: "https://twitter.com/weijunext", icon: BsTwitterX },
     { name: 'github', href: "https://github.com/weijunext/", icon: BsGithub },
     { name: 'buyMeCoffee', href: "https://www.buymeacoffee.com/weijunext", icon: SiBuymeacoffee },

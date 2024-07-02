@@ -33,6 +33,7 @@ export const LangSwitcher = () => {
         <SelectValue placeholder="Language" />
       </SelectTrigger>
       <SelectContent>
+        {/*在这里，Object.keys(localeNames) 是一个JavaScript内置方法，用于从给定的localeNames对象中提取所有可枚举的自有属性的键名，并返回一个包含这些键名的数组。随后，.map()方法被调用在这个数组上 */}
         {Object.keys(localeNames).map((key: string) => {
           const name = localeNames[key];
           return (

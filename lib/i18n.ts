@@ -2,6 +2,7 @@ import { match } from "@formatjs/intl-localematcher";
 import Negotiator from "negotiator";
 
 export const locales = ["", "en", "en-US", "zh", "zh-CN", "zh-TW", 'zh-HK', 'ja', "ar", "es", "ru"];
+// 这里使用了 emoji 表示国旗
 export const localeNames: any = {
   en: "🇺🇸 English",
   zh: "🇨🇳 中文",
@@ -38,5 +39,6 @@ export const getDictionary = async (locale: string) => {
     locale = "en";
   }
 
+  // 这里还动态 import
   return dictionaries[locale]();
 };

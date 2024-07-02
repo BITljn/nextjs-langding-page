@@ -74,6 +74,7 @@ const Header = () => {
           <LangSwitcher />
         </div>
 
+        {/* 手机页面，网页端看不到 */}
         <div className="md:hidden">
           <button
             aria-label="Open Menu"
