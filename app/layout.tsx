@@ -18,21 +18,6 @@ const fontSans = FontSans({
   variable: "--font-sans",
 });
 
-const metadataBase = siteConfig.metadataBase instanceof URL
-  ? siteConfig.metadataBase
-  : new URL(siteConfig.metadataBase);
-
-export const metadata = {
-  title: siteConfig.name,
-  description: siteConfig.description,
-  keywords: siteConfig.keywords,
-  authors: siteConfig.authors,
-  creator: siteConfig.creator,
-  icons: siteConfig.icons,
-  metadataBase: metadataBase,
-  openGraph: siteConfig.openGraph,
-  twitter: siteConfig.twitter,
-};
 export const viewport: Viewport = {
   themeColor: siteConfig.themeColors,
 };
